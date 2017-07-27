@@ -1,0 +1,129 @@
+#chaticon {
+    display: none
+}
+
+#editorcontainerbox {
+    z-index: -1;
+}
+
+#editorcontainerbox:before {
+	content: '';
+	display: block;
+	height: 57px;
+	width: 100%;
+	background-color: #0288d1;
+	    box-shadow: 0 1px 13px #C2C2C2;
+	z-index: 1;
+}
+
+.editorcontainer {
+    top: 57px!important;
+    z-index: -1 !important;
+    border: 1px solid #eee;
+    border-top: none
+}
+
+.toolbar {
+    height: 53px!important;
+    background: #fff;
+    border-bottom: none
+}
+.toolbar ul.menu_left {
+	right: 50px;
+	overflow: visible;
+}
+.toolbar ul li {
+    height: 46px;
+    margin: 0 2px;
+}
+.toolbar ul li.separator {
+    background: #CCD5D8;
+    visibility: visible;
+    width: 1px;
+    padding: 0;
+    margin: 15px 3px;
+    height: 20px;
+}
+.toolbar ul li a {
+    height: 40px;
+    width: 35px;
+    border: none;
+    background: 0 0
+}
+
+.toolbar ul li a .buttonicon {
+	height: 100%;
+    width: 100%;
+}
+.toolbar ul li a span.buttonicon {
+	padding-top: 8px;
+}
+
+.toolbar ul li a .buttonicon:before {
+    font-size: 20px
+}
+
+.toolbar ul li a:hover {
+    background: #4B87D2
+}
+
+.toolbar ul li a:hover button:before, .toolbar ul li a:hover span.buttonicon:before {
+    color: #fff
+}
+
+.font-size-icon.ep_font_size {
+	display: none;
+}
+#font-size {
+	display: block!important;
+	position: relative;
+	top: 0px;
+	padding-top: 2px;
+	padding-left: 10px;
+}
+#font-size:before {
+	content: "\e81f";
+	font-family: fontawesome-etherpad;
+	font-size: 20px;
+}
+#font-size:hover {
+	color: #fff;
+	background: #4B87D2;
+}
+#font-size select {
+	height: 50px;
+	width: 50px;
+	color: rgba(0, 0, 0, 0);
+	background: 0 0;
+	border: none;
+	margin-left: -34px;
+	margin-right: -4px;
+	cursor: pointer;
+}
+#users {
+    position: absolute;
+    top: 50px;
+    right: 4px;
+}
+#nootherusers {
+	padding: 0;
+}
+#online_count {
+	top: 15px !important;
+	left: -6px;
+}
+#innerdocbody {
+	padding: 50px 55px!important;
+	font-size: 16px;
+	line-height: 25px;
+}
+#outerdocbody iframe {
+	left: 0 !important;
+	width: 100% !important;
+}
+
+
+/* Ensure that lists stay aligned properly */
+left ul, justify ul {
+	list-style-position: outside !important;
+}

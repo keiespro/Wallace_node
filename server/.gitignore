@@ -1,0 +1,9 @@
+.DS_Store
+node_modules
+npm-debug.log
+
+etherpad/src/static/custom
+
+etherpad/src/static/images/
+
+/tmp/

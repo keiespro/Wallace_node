@@ -1,0 +1,38 @@
+<div class="mdl-cell mdl-cell--4-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+<div class="wallace-content fixed-width-form mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--4-col">
+	<form class="wallace-signup-form" ng-submit="signUp()">
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			<h1>Sign Up</h1>
+		</div>
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			<input class="mdl-textfield__input" type="text" id="name" pattern="[A-Za-z\s]*" ng-model="data.name">
+			<label class="mdl-textfield__label mdl-color-text--grey-400" for="name">Your name</label>
+			<span class="mdl-textfield__error">Name must be only letters and spaces</span>
+		</div>
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			<input class="mdl-textfield__input" type="email" id="email" ng-model="data.email">
+			<label class="mdl-textfield__label mdl-color-text--grey-400" for="email">Your email address</label>
+			<span class="mdl-textfield__error">Invalid email address</span>
+		</div>
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			<input class="mdl-textfield__input" type="password" id="password" ng-model="data.password">
+			<label class="mdl-textfield__label mdl-color-text--grey-400" for="password">Password</label>
+		</div>
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			<input class="mdl-textfield__input" type="password" id="passwordConfirm" ng-model="data.passwordConfirm">
+			<label class="mdl-textfield__label mdl-color-text--grey-400" for="passwordConfirm">Password Again</label>
+			<span class="mdl-textfield__error" ng-style="(data.passwordConfirm && data.password != data.passwordConfirm) && { 'visibility': 'visible' }">Password does not match</span>
+		</div>
+		<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+			<p>
+				Already have an account? <a href="#/users/sign-in" class="mdl-color-text--light-blue-700">Sign In</a>
+			</p>
+		</div>
+		<input type="submit" style="display: none;">
+	</form>
+</div>
+<div class="wallace-signup-form-submit mdl-cell mdl-cell--1-col">
+	<button type="submit" ng-click="signUp()" class="mdl-button mdl-js-button mdl-button--fab mdl-color--cyan">
+		<i class="material-icons mdl-color-text--grey-100">arrow_forward</i>
+	</button>
+</div>

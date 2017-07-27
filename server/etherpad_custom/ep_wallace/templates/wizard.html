@@ -1,0 +1,69 @@
+<script id="tmpl-wizard-add-button" type="text/html">
+	<div class="add_section">
+		<button class="btn-add-section">+</button>
+		<div class="add-section-selection" data-btn-toggle data-target=".btn-add-section">
+			<ul>
+				<li><span class="add-title">ADD A SECTION...</span></li>
+				<li><a class="section-item item-cover" data-target="cover" href="#">Cover</a></li>
+				<li><a class="section-item item-abstract" data-target="abstract" href="#">Abstract</a></li>
+				<li><a class="section-item item-introduction" data-target="introduction" href="#">Introduction</a></li>
+				<li><a class="section-item item-literature-review" data-target="literature-review" href="#">Literature review</a></li>
+				<li><a class="section-item item-methodology" data-target="methodology" href="#">Methodology</a></li>
+				<li><a class="section-item item-results" data-target="results" href="#">Results</a></li>
+				<li><a class="section-item item-discussion" data-target="discussion" href="#">Discussion</a></li>
+				<li><a class="section-item item-conclusion" data-target="conclusion" href="#">Conclusion</a></li>
+			</ul>
+		</div>
+	</div>
+</script>
+
+<script id="tmpl-wizard-suggestions-container" type="text/html">
+	<div class="suggestions-outer-container">
+		<div class="suggestions-container">
+			<div class="suggestion-close">&times;</div>
+			<div class="suggestions-source">
+			</div>
+			<div class="ext-actions">
+				<a href="#" class="writebox-tabs edit-button writebox-tab-1"><span></span></a>
+				<a href="#" class="writebox-tabs notes-button writebox-tab-2"><span></span></a>
+				<a class="writebox-tabs writebox-tab-3"><span></span></a>
+				<a class="writebox-tabs writebox-tab-4"><span></span></a>
+			</div>
+			<div class="suggestions-guide">
+				<div class="label">Writing Guide</div>
+				<div class="guide-desc">Also explain the study\'s main contribution in such a way that the benefits to the reader are accentuated.</div>
+			</div>
+			<div class="suggestions-patterns">
+			</div>
+			<div class="notes-source">
+			</div>
+		</div>
+	</div>
+</script>
+
+<script id="tmpl-wizard-suggestions-patterns" type="text/html">
+	<% patterns.forEach(function(pattern) { %>
+		<div class="suggestions-pattern">
+			<div class="heading-for">
+				<%= pattern.headingfor %>
+			</div>
+			<div class="sub-heading">
+				<%= pattern.subheading %>
+			</div>
+			<div class="suggestions-suggestions">
+				<% pattern.suggestions.forEach(function(suggestion) { %>
+					<% if (Array.isArray(suggestion) && suggestion[1]) { %>
+						<a href="#" class="suggestions-suggest" data-value="<%= encodeURI(escapeHtml(suggestion[1])) %>"><%= escapeHtml(suggestion[0]) %></a>
+					<% } else { %>
+						<a href="#" class="suggestions-suggest"><%= escapeHtml(suggestion) %></a>
+					<% } %>
+				<% }) %>
+			</div>
+		</div>
+	<% }) %>
+</script>
+
+<script id="tmpl-custom-popover" type="text/html">
+	<div class="custom-popover">
+	</div>
+</script>

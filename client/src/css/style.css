@@ -1,0 +1,298 @@
+html {
+	height: 100%;
+	width: 100%;
+    overflow: hidden;
+}
+body {
+    height: 100%;
+    width: 100%;
+}
+.mdl-layout__container {
+	overflow: auto;
+}
+.wallace-layout {
+  	font-family: 'Roboto', 'Noto', sans-serif;
+	min-width: 850px;
+	overflow: auto;
+}
+.wallace-layout .wallace-ribbon {
+  height: 195px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+.wallace-layout .wallace-ribbon .wallace-title {
+  position: relative;
+}
+header .mdl-textfield__input {
+	border-bottom: none;
+}
+header .back-button {
+	margin: 0 20px 0 -20px;
+}
+header .is-focused .mdl-textfield__label:after {
+	background-color: #fff;
+}
+header .name {
+	text-transform: capitalize;
+}
+.wallace-layout .wallace-ribbon .wallace-title h4 {
+  margin-top: 144px;
+  margin-left: 6%;
+  font-size: 20px;
+}
+.wallace-layout .wallace-content {
+  margin-top: 50px;
+  padding-top: 35px;
+}
+.wallace-layout .wallace-content .wallace-signup-form h1 {
+  text-align: left;
+  font-weight: lighter;
+  font-size: 43px;
+  margin-top: 14px;
+  margin-bottom: 30px;
+}
+.wallace-layout .wallace-content .wallace-signup-form .mdl-textfield {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wallace-layout .wallace-content .wallace-content-confirm-sent {
+  text-align: center;
+  padding: 0 50px 50px 50px;
+}
+.wallace-layout .wallace-content .wallace-content-confirm-sent h2 .icon {
+  font-size: inherit;
+}
+.wallace-layout .wallace-content .wallace-content-confirm-sent p {
+  font-size: 110%;
+}
+.wallace-layout .wallace-content-confirm-success {
+  text-align: center;
+  padding: 0 50px 20px 50px;
+}
+.wallace-layout .wallace-content-confirm-success h1 .icon {
+  font-size: inherit;
+}
+.wallace-layout .wallace-content-confirm-success button {
+  position: relative;
+  top: 45px;
+}
+.wallace-layout .wallace-content-confirm-success p {
+  font-size: 110%;
+}
+.wallace-layout .wallace-signup-form-submit {
+  margin-top: 159px;
+  text-align: center;
+}
+.fixed-width-form {
+	width: 470px;
+}
+.help-text {
+	font-size: 12px;
+}
+.help-text a {
+	font-weight: normal;
+}
+
+.text-center {
+	text-align: center;
+}
+.block-center {
+	margin: 0 auto;
+}
+.is-focused .mdl-textfield__label:after {
+	background-color: #00BCD4;
+}
+
+
+/* LIBRARY */
+.library-wrap {
+	/*z-index: 999;*/
+}
+.wallace-library .none {
+	padding: 80px 0;
+}
+.wallace-library .add {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+}
+.wallace-library .paper-type-select {
+	text-align: left;
+	margin-left: 10%;
+	color: #6F6F70;
+}
+
+.wallace-library .paper-type-select span {
+	cursor: pointer;
+	padding-left: 10px;
+	border: none;
+	width: 150px;
+	height: 40px;
+	font-size: 18px;
+	font-weight: bold;
+	display: inline-block;
+	vertical-align: super;
+}
+
+.wallace-library .paper-type-select .mdl-menu__container {
+	margin: -18px 0 0 10px;
+}
+
+.wallace-library .paper-type-select .arrow {
+	margin-left: -6px;
+	vertical-align: middle;
+}
+
+.wallace-library .papers .paper {
+	position: relative;
+	cursor: pointer;
+	padding-top: 25%;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.wallace-library .papers .paper:hover:after {
+	content: '';
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	border: 2px solid #89D8EB;
+	margin: -2px;
+}
+.wallace-library .papers .paper .mdl-button {
+	z-index: 999;
+	position: absolute;
+	right: 5px;
+	bottom: 25px;
+}
+.wallace-library .papers .paper .text {
+	text-align: left;
+	padding: 0 20px;
+}
+.wallace-library .papers .paper .text h5 {
+	font-size: 18px;
+	font-weight: normal;
+	margin: 20px 0 5px;
+}
+.wallace-library .papers .paper img {
+	width: 100%;
+	border-bottom: 1px solid #ddd;
+}
+.wallace-layout .wallace-library-add button {
+  float: right;
+}
+
+.ng-modal-overlay {
+  /* A dark translucent div that covers the whole screen */
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0.4;
+}
+.ng-modal-dialog {
+  /* A centered div above the overlay with a box shadow. */
+  z-index: 10000;
+  position: absolute;
+  width: 50%;
+  /* Default */
+  /* Center the dialog */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  background-color: #fff;
+      box-shadow: 0px 0px 20px #555;
+}
+.ng-modal-dialog-content {
+  padding: 10px;
+  text-align: left;
+}
+
+.ng-modal-dialog-content .wallace-create-new-modal i {
+  position: absolute;
+  top: 30%;
+  right: 0;
+}
+
+.ng-modal-dialog-content .upload-docx {
+  margin-top: 2rem;
+}
+
+.ng-modal-dialog-content .create-paper {
+  position: absolute;
+  right: -30px;
+  top: 50%;
+  box-shadow: 1px 3px 5px #888;
+}
+.paper-creating-spinner {
+	position: absolute;
+    right: -33px;
+    top: 50%;
+    width: 62px;
+    height: 62px;
+    margin-top: -3px;
+}
+.paper-creating-spinner div {
+	border-color: #FF9800;
+}
+.ng-modal-close {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 120%;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.mdl-button--file input {
+    cursor: pointer;
+    height: 100%;
+    right: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+}
+::-webkit-file-upload-button {
+    cursor: pointer;
+}
+
+
+/*Papers*/
+.wallace-header {
+	min-height: 54px;
+}
+.paper-header {
+	padding: 32px 40px 22px 40px;
+	height: 55px;
+}
+.paper-main-wrap {
+	overflow: visible !important;
+	padding: 0;
+}
+.paper-main-wrap .wallace-container, .paper-editor {
+	/*height: 100%;*/
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+.paper-editor iframe {
+	border: none;
+}
+
+
+.ng-error-message {
+  font-size: 12px;
+  color: rgb(239,83,80);
+  padding-top: 0px;
+}

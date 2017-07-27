@@ -1,0 +1,228 @@
+.editorcontainer {
+    border: 0 !important;
+}
+
+/* toolbar */
+#font-size:hover, .toolbar ul li a:hover {
+    background-color: transparent;
+}
+
+.toolbar ul li .activeButton, .toolbar ul li a:active {
+    border: none !important;
+    background: none !important;
+
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.toolbar ul li a:focus {
+    outline: none;
+}
+
+.toolbar ul li a {
+    border: none !important;
+}
+
+.buttonicon:focus {
+    outline: none;
+    border: none;
+}
+
+.toolbar ul li a .buttonicon {
+    height: 38px;
+    border: 1px solid transparent;
+}
+
+ul.menu_left .buttonicon:hover,
+ul.menu_right .buttonicon:hover {
+    background-color: #f4f3f8;
+}
+
+ul.menu_left .buttonicon:before,
+ul.menu_right .buttonicon:before {
+	background-position: center center;
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+
+    content: '';
+    opacity: 0.54;
+}
+
+ul.menu_left .buttonicon:active,
+ul.menu_left .buttonicon:focus,
+ul.menu_left .buttonicon.toggle-clicked,
+ul.menu_right .buttonicon:active,
+ul.menu_right .buttonicon:focus,
+ul.menu_right .buttonicon.toggle-clicked {
+    border: 1px solid #e6e5e8 !important;
+}
+
+.buttonicon-undo:before {
+	background-image: url( "/static/plugins/ep_wallace/static/imgs/icons/ic_toolbar_history_undo@2x.png" );
+}
+
+.buttonicon-redo:before {
+	background-image: url( "/static/plugins/ep_wallace/static/imgs/icons/ic_toolbar_history_redo@2x.png" );
+}
+
+.buttonicon-bold:before {
+	background-image: url( "/static/plugins/ep_wallace/static/imgs/icons/ic_toolbar_format_bold@2x.png" );
+}
+
+.buttonicon-italic:before {
+	background-image: url( "/static/plugins/ep_wallace/static/imgs/icons/ic_toolbar_format_italic@2x.png" );
+}
+
+.buttonicon-underline:before {
+	background-image: url( "/static/plugins/ep_wallace/static/imgs/icons/ic_toolbar_format_underlined@2x.png" );
+}
+
+.buttonicon-strikethrough:before {
+
+}
+
+.buttonicon-insertorderedlist:before {
+	background-image: url( "/static/plugins/ep_wallace/static/imgs/icons/ic_toolbar_format_list_numbered@2x.png" );
+}
+
+.buttonicon-insertunorderedlist:before {
+	background-image: url( "/static/plugins/ep_wallace/static/imgs/icons/ic_toolbar_format_list_bulleted@2x.png" );
+}
+
+.buttonicon-indent:before {
+    
+}
+
+.buttonicon-outdent:before {
+    
+}
+
+.buttonicon-h1:before {
+    background-image: url( "/static/plugins/ep_wallace/static/imgs/icons/ic_toolbar_format_size_h1@2x.png" );
+}
+
+.buttonicon-h2:before {
+    background-image: url( "/static/plugins/ep_wallace/static/imgs/icons/ic_toolbar_format_size_h2@2x.png" );
+}
+
+.buttonicon-h3:before {
+    background-image: url( "/static/plugins/ep_wallace/static/imgs/icons/ic_toolbar_format_size_h3@2x.png" );
+}
+
+.buttonicon-fs:before {
+    background-image: url( "/static/plugins/ep_wallace/static/imgs/icons/ic_toolbar_format_size_text@2x.png" );
+}
+
+.buttonicon-format-clear:before {
+    background-image: url( "/static/plugins/ep_wallace/static/imgs/icons/ic_toolbar_format_clear@2x.png" );
+}
+
+.buttonicon-plus:before {
+    background-image: url( "/static/plugins/ep_wallace/static/imgs/icons/ic_toolbar_add@2x.png" );
+}
+
+.buttonicon-search:before {
+    background-image: url( "/static/plugins/ep_wallace/static/imgs/icons/ic_toolbar_search@2x.png" );
+}
+
+.ep_align > .buttonicon:before {
+	background-position: center center;
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+
+    content: '' !important;
+    opacity: 0.54;
+}
+
+.toolbar ul li a span.buttonicon {
+	padding-top: 0px;
+    top: 1px !important;
+    position: relative;
+}
+
+.toolbar ul li a span.buttonicon:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -moz-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%);
+}
+
+.ep_align_left > .buttonicon:before {
+	background-image: url( "/static/plugins/ep_wallace/static/imgs/icons/ic_toolbar_format_align_left@2x.png" );
+}
+
+.ep_align_center > .buttonicon:before {
+	background-image: url( "/static/plugins/ep_wallace/static/imgs/icons/ic_toolbar_format_align_center@2x.png" );
+}
+
+.ep_align_right > .buttonicon:before {
+	background-image: url( "/static/plugins/ep_wallace/static/imgs/icons/ic_toolbar_format_align_right@2x.png" );
+}
+
+.ep_align_justify > .buttonicon:before {
+	background-image: url( "/static/plugins/ep_wallace/static/imgs/icons/ic_toolbar_format_align_justify@2x.png" );
+}
+
+#editbar {
+    width: 850px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#editbar.disabled {
+	cursor: not-allowed;
+}
+#editbar.disabled a {
+	pointer-events: none;
+}
+
+/* font-size drop down */
+div.size-selection {
+    position: absolute;
+    display: none;
+
+    -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+div.size-selection ul li {
+    display: block;
+}
+
+div.size-selection ul li a {
+    display: block;
+    line-height: 2;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    text-decoration: none;
+    color: #000;
+    background-color: #fff;
+}
+
+div.size-selection ul li a:hover {
+    background-color: #f4f3f8;
+}
+
+.toolbar ul li {
+    margin: 4px 2px;
+}
+.toolbar ul li a {
+    padding: 0px 1px;
+}
+
+.toolbar ul li a .buttonicon.toggle-clicked {
+    background-color: #f4f3f8;
+}

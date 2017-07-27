@@ -1,0 +1,17 @@
+{
+  "name": "ep_wallace",
+  "version": "0.0.1",
+  "description": "Etherpad Lite plugin for Wallace Project",
+  "author": {
+    "name": "Alex Stiger",
+    "email": "alex@roamandwander.com"
+  },
+  "contributors": [],
+  "dependencies": {
+    "glob": "^6.0.4",
+    "html-minifier": "^1.1.1"
+  },
+  "engines": {
+    "node": ">= 0.6.0"
+  }
+}

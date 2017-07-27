@@ -1,0 +1,80 @@
+<div class="mdl-cell mdl-cell--3-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+<div class="wallace-library mdl-color--transparant content mdl-color-text--grey-800 mdl-cell mdl-cell--12-col mdl-typography--text-center">
+	<div ng-show="loading" class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
+
+	<div class="paper-type-select">
+		<i class="material-icons">person</i>
+		<span class="mdl-textfield__input" type="text" id="papersType" name="papersType">
+			{{ papersType }}
+			<i class="material-icons arrow">arrow_drop_down</i>
+		</span>
+		<ul for="papersType" class="mdl-menu mdl-js-menu mdl-menu--bottom-left">
+			<li ng-repeat="writingStyle in writingStyles" class="mdl-menu__item" ng-click="setPapersType('My Papers')">My Papers</li>
+			<li ng-repeat="writingStyle in writingStyles" class="mdl-menu__item" ng-click="setPapersType('Shared with Me')">Shared with Me</li>
+		</ul>
+	</div>
+
+	<div ng-show="papers.mine.length === 0 && papersType == 'My Papers'" class="none mdl-color--white mdl-shadow--2dp mdl-color-text--grey-600 mdl-cell mdl-cell--10-col block-center">
+		<h3>Your library is empty.</h3>
+		<h6 class="mdl-color-text--grey-600">
+			Click the '+' button to start composing a new paper.
+		</h6>
+	</div>
+
+	<div ng-show="papers[papersType].length" class="papers mdl-grid mdl-cell--10-col block-center">
+		<div ng-click="openPaper(paper.id)"
+			class="paper mdl-buttom mdl-color--white mdl-shadow--2dp mdl-cell mdl-cell--3-col"
+			ng-repeat="paper in papers[papersType] track by $index"
+			ng-style="{'background-image': 'url('+paper.thumbnail+')' }"
+		>
+			<div class="text">
+				<h5>{{ paper.title }}</h5>
+				<p class="mdl-color-text--grey-500">{{ paper.createdAt | amDateFormat:'MM/DD/Y h:mma' }}</p>
+			</div>
+			<button ng-click="$event.stopPropagation();" id="menu-{{ paper.id }}"
+			        class="mdl-button mdl-js-button mdl-button--icon mdl-color-text--grey-500">
+			  <i class="material-icons">more_vert</i>
+			</button>
+
+			<ul class="mdl-menu mdl-menu--top-right mdl-js-menu mdl-js-ripple-effect"
+			    for="menu-{{ paper.id }}">
+			  <li class="mdl-menu__item" ng-click="deletePaper(paper, $event)">Delete</li>
+			</ul>
+		</div>
+	</div>
+
+	<button class="add mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-color--cyan mdl-color-text--white" ng-click="toggleModal()">
+		<i class="material-icons">add</i>
+	</button>
+</div>
+<modal-dialog show='modalShown' width='400px' height='300px'>
+	<div class="mdl-grid mdl-cell--10-col block-center">
+		<form ng-submit="createPaper()">
+			<div class="mdl-textfield mdl-js-textfield wallace-create-new-modal">
+		    <input class="mdl-textfield__input" type="text" id="doc_title" name="doc_title" ng-model="paper.doc_title">
+		    <label class="mdl-textfield__label mdl-color-text--grey-400" for="doc_title">Untitled Paper</label>
+		  </div>
+			<div class="mdl-textfield mdl-js-textfield wallace-create-new-modal  mdl-textfield--floating-label">
+		    <input class="mdl-textfield__input" type="text" id="doc_style" name="doc_style" ng-model="paper.doc_style">
+		    <label class="mdl-textfield__label mdl-color-text--grey-400" for="doc_style">Template / Writing Style</label>
+	 			<i class="material-icons">arrow_drop_down</i>
+				<ul for="doc_style" class="mdl-menu mdl-js-menu mdl-menu--bottom-left">
+					<li ng-repeat="writingStyle in writingStyles" class="mdl-menu__item" disabled>{{ writingStyle.name}}</li>
+				</ul>
+		  </div>
+			<button ng-hide="paper.file" class="upload-docx mdl-button mdl-js-button  mdl-color--white mdl-color-text--grey mdl-button--raised mdl-button--file">
+      			UPLOAD DOCX<input accept=".docx" onchange="angular.element(this).scope().fileChanged(this)" type="file" id="uploadBtn">
+			</button>
+			<div ng-if="paper.file">{{ paper.file.name }}<br><br></div>
+			<button ng-show="paper.file" ng-click="removeFile($event)" class="mdl-button mdl-js-button  mdl-color--white mdl-color-text--grey mdl-button--raised">
+				DELETE
+			</button>
+			<br><br>
+			<p ng-show="creating" class="mdl-color-text--light-blue-700">Preparing your new paper...</p>
+		</form>
+	</div>
+	<div ng-show="creating" class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active mdl-color-text--orange paper-creating-spinner"></div>
+	<button class="create-paper mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-color--cyan mdl-color-text--white" ng-click="createPaper()">
+		<i class="material-icons">arrow_forward</i>
+	</button>
+</modal-dialog>

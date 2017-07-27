@@ -1,0 +1,24 @@
+<div class="mdl-layout__header-row mdl-color--light-blue-700">
+  <span class="mdl-layout-title mdl-color-text--grey-100">Library</span>
+  <div class="mdl-layout-spacer"></div>
+  <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+    <label class="mdl-button mdl-js-button mdl-button--icon mdl-color-text--grey-100" for="search">
+      <i class="material-icons">search</i>
+    </label>
+    <div class="mdl-textfield__expandable-holder">
+      <input class="mdl-textfield__input mdl-color-text--grey-100" type="text" id="search">
+      <label class="mdl-textfield__label mdl-color-text--grey-100" for="search">Enter your query...</label>
+    </div>
+  </div>
+  <button id="wallace-menu-lower-right" class="mdl-button mdl-js-button mdl-color-text--grey-100">
+     <i class="material-icons mdl-text-color--grey-100">more_vert</i>
+    <span class="name mdl-color-text--grey-100">{{ $root.user.fullName }}</span>
+  </button>
+
+  <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="wallace-menu-lower-right">
+    <li class="mdl-menu__item" ng-click="signOut()">Sign Out</li>
+    <!-- <li class="mdl-menu__item">Another Action</li>
+    <li disabled class="mdl-menu__item">Disabled Action</li>
+    <li class="mdl-menu__item">Yet Another Action</li> -->
+  </ul>
+</div>

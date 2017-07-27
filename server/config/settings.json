@@ -1,0 +1,18 @@
+{
+	"ses": {
+		"key": "AKIAJF4K5TDGL4S5XPMQ",
+		"secret": "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"
+	},
+	"etherpad": {
+		"host": "127.0.0.1",
+		"port": "9001"
+	},
+	"redis": {
+		"host": "localhost",
+		"port": 6379,
+		"db": 10
+	},
+	"allowOrigin": "http://localhost:8080",
+	"etherpadUrl": "http://localhost:9001",
+	"apiUrl": "http://localhost:3000"
+}

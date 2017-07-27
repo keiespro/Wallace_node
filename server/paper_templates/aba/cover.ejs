@@ -1,0 +1,23 @@
+<div class="aba-header aba-border focus-on-click">
+    <textarea rows="1" placeholder="RUNNING HEAD SHORT TITLE ALL CAPS" data-ref-id="header" class="header"><%= values.header.content ? values.header.content : '' %></textarea>
+</div>
+<div class="aba-center">
+    <div class="aba-title aba-border focus-on-click">
+        <textarea rows="1" placeholder="Full Title of Paper: Sentence Case, Centered" class="auto-size element-1" data-ref-id="element-1"><%= values['element-1'].content %></textarea>
+    </div>
+    <br class="clear" />
+    <div class="aba-author aba-border focus-on-click">
+    	<textarea rows="1" placeholder="Name of Author" class="auto-size element-2" data-ref-id="element-2"><%= values['element-2'].content %></textarea>
+    </div>
+    <br class="clear" />
+    <div class="aba-affiliation aba-border focus-on-click">
+    	<textarea rows="1" placeholder="Author's Affiliation" class="auto-size element-3" data-ref-id="element-3"><%= values['element-3'].content %></textarea>
+    </div>
+</div>
+<div class="aba-optional aba-border focus-on-click">
+    <textarea 
+    	placeholder="(Optional) Author note with more information about affiliations, resarch grants, conflict of interest and how to contact."
+    	data-ref-id="element-4"
+    	class="auto-size element-4" 
+    ><%= values['element-4'].content %></textarea>
+</div>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Wallace Editor</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=1000">
+	<link rel="icon" href="/img/favicon.ico">
+	<link charset="utf-8" rel="stylesheet" href="vendors/material-design-lite/material.min.css?rev=@@hash">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="css/normalize.css?rev=@@hash">
+	<link rel="stylesheet" href="css/main.css?rev=@@hash">
+	<link rel="stylesheet" href="css/style.css?rev=@@hash">
+	<script src="js/lib/modernizr-2.8.3.min.js"></script>
+</head>
+
+<body>
+	<!--[if lt IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+	<div class="wallace-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100" ng-app="wallace-edit">
+		<header class="wallace-header mdl-layout__header mdl-layout__header--scroll mdl-color--light-blue-700 mdl-color-text--grey-800" ui-view="header" ng-show="headerEnabled">
+		</header>
+		<div class="wallace-ribbon mdl-color--light-blue-700" ui-view="band" ng-show="bandEnabled">
+			<div class="wallace-title">
+				<h4 class="mdl-color-text--grey-100">Wallace Online Editor</h4>
+			</div>
+		</div>
+		<main class="wallace-main mdl-layout__content" ng-class="$root.mainClass">
+			<div class="wallace-container mdl-grid mdl-cell--stretch " ui-view="body">
+			</div>
+		</main>
+	</div>
+	<script charset="utf-8" src="vendors/material-design-lite/material.min.js?rev=@@hash"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+	<script src="vendors/moment/min/moment.min.js?rev=@@hash"></script>
+	<script src="vendors/angular-moment/angular-moment.min.js?rev=@@hash"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+	<script src="js/plugins.js?rev=@@hash"></script>
+	<script src="js/lib/services.js?rev=@@hash"></script>
+	<script src="js/lib/modal-dialog.js?rev=@@hash"></script>
+	<script src="js/app.js?rev=@@hash"></script>
+	<script src="js/layouts/layouts.js?rev=@@hash"></script>
+	<script src="js/users/users.js?rev=@@hash"></script>
+	<script src="js/library/library.js?rev=@@hash"></script>
+	<script src="js/papers/papers.js?rev=@@hash"></script>
+</body>
+
+</html>

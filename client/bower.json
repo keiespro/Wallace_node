@@ -1,0 +1,33 @@
+{
+  "name": "Wallace-frontend",
+  "description": "Frontend for Wallace editor",
+  "main": "server.js",
+  "authors": [
+    "Paat Sinsuwan"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "Angular",
+    "Node",
+    "Less",
+    "HTML"
+  ],
+  "homepage": "https://github.com/roamandwander/wallace-frontend",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/vendors",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "angular-route": "~1.4.8",
+    "angular-ui-router": "~0.2.15",
+    "material-design-lite": "~1.0.6",
+    "moment": "~2.11.1",
+    "angular-moment": "~0.10.3"
+  }
+}

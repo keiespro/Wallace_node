@@ -1,0 +1,119 @@
+.aba-border {
+	border: 1px dashed #C7CAD3;
+	padding: 0;
+	font-weight: 300;
+	color: #8b8e98;
+}
+
+.aba-center {
+	text-align: center;
+}
+
+.aba-header {
+	text-transform: uppercase;
+	font-weight: 400;
+	display: inline-block;
+	margin-bottom: 20px;
+	width: auto;
+	max-width: 100%;
+}
+.aba-header.aba-border textarea {
+	text-transform: uppercase;
+	width: 275px;
+}
+
+.aba-title {
+	line-height: 1;
+	margin: 0 auto 40px;
+	width: 80%;
+	font-size: 30px;
+	text-align: center;
+	text-transform: capitalize;
+}
+
+.overlay-page-cover .aba-title {
+	margin: 100px auto 25px;
+	width: auto;
+	max-width: 100%;
+}
+
+.overlay-page .aba-title textarea {
+	font-size: 30px;
+	text-align: center;
+	height: 40px;
+}
+
+.aba-author {
+	margin: 30px auto 0;
+	width: auto;
+	font-size: 20px;
+	text-align: center;
+	display: inline-block;
+	max-width: 100%;
+}
+
+.overlay-page .aba-author textarea {
+	width: 175px;
+	font-size: 22px;
+	text-align: center;
+}
+
+.aba-affiliation {
+	margin: 10px auto 0;
+	font-size: 16px;
+	text-align: center;
+	max-width: 100%;
+	width: auto;
+	display: inline-block;
+}
+
+.overlay-page .aba-affiliation textarea {
+	font-size: 16px;
+	text-align: center;
+	width: 200px;
+}
+
+.aba-optional {
+	margin-top: 100px;
+}
+
+.aba-contents {
+	margin-top: 40px;
+}
+
+.aba-list-item-wrapper  {
+	margin-bottom: 30px;
+	position: relative;
+}
+
+.aba-list-item-wrapper .aba-list-item {
+	margin-bottom: 10px;
+}
+
+.aba-list-item-wrapper .aba-list-item .aba-list-item-label {
+	float: left;
+}
+.aba-list-item-wrapper .aba-list-item .aba-list-item-label .elem {
+	color: #A0A0A0;
+	display: inline-block;
+	font-size: 12px;
+	margin: 0px 10px 10px 0;
+	vertical-align: top;
+}
+
+.aba-list-item-wrapper .aba-list-item .aba-list-item-text {
+	margin-left: 70px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #9D9D9D;
+}
+
+.aba-content {
+	margin-left: 70px;
+}
+
+.clear {
+	height: 0;
+	width: 100%;
+	clear: both;
+}

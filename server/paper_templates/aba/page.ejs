@@ -1,0 +1,23 @@
+<div class="aba-header aba-border">
+	<textarea rows="1" placeholder="RUNNING HEAD SHORT TITLE ALL CAPS" data-ref-id="header" class="header"><%= values.header.content ? values.header.content : '' %></textarea>
+</div>
+<div class="aba-contents" >
+	<div class="aba-title">
+		<%= section %>
+	</div>
+	<% elements.forEach(function (element) { %>
+		<div class="aba-list-item-wrapper" data-suggestion data-section="<%= section %>" data-element="<%= element.id %>">
+		<div class="notes-indicator" style="display: <%= values[element.id].notes ? 'block' : 'none' %>"></div>
+	        <div class="aba-list-item">
+	        	<div class="aba-list-item-label"><span class="elem">Elem.</span> <%= element.number %></div>
+	            <div class="aba-list-item-text"><%= element.setting.guide %></div>
+	        </div>
+	        <div class="aba-content aba-border element-content-input">
+            	<textarea rows="1" placeholder="Click to compose..." data-suggestion-trigger class="<%= element.id %>" data-ref-id="<%= element.id %>"><%= values[element.id].content %></textarea>
+            </div>
+            <div class="aba-content aba-border element-notes-input">
+            	<textarea rows="1" placeholder="Click to compose..." class="<%= element.id %>-notes" data-ref-id="<%= element.id %>"><%= values[element.id].notes %></textarea>
+            </div>
+        </div>
+	<% }) %>
+</div>

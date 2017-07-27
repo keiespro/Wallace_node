@@ -1,0 +1,52 @@
+{
+  "name": "wallace-server",
+  "version": "0.0.1",
+  "description": "Server for Wallace editor",
+  "private": true,
+  "scripts": {
+    "start": "DEBUG=server,etherpad BLUEBIRD_WARNINGS=0 gulp start",
+    "start-wallace": "DEBUG=server,etherpad BLUEBIRD_WARNINGS=0 gulp start-wallace",
+    "start-etherpad": "DEBUG=server,etherpad BLUEBIRD_WARNINGS=0 gulp start-etherpad",
+    "migrate": "./node_modules/.bin/sequelize db:migrate --config config/database.json",
+    "deploy-staging": "shipit staging deploy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/roamandwander/wallace-server.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/roamandwander/wallace-server/issues"
+  },
+  "homepage": "https://github.com/roamandwander/wallace-server#readme",
+  "dependencies": {
+    "bcrypt": "^0.8.5",
+    "body-parser": "^1.14.2",
+    "connect-redis": "^3.0.2",
+    "cookie-parser": "^1.4.0",
+    "crypto": "0.0.3",
+    "debug": "^2.2.0",
+    "del": "^2.2.0",
+    "express": "^4.13.3",
+    "express-session": "^1.12.1",
+    "html-minifier": "^1.1.1",
+    "mammoth": "^0.3.30",
+    "morgan": "^1.6.1",
+    "multer": "^1.1.0",
+    "mysql": "^2.10.0",
+    "node-ses": "^1.1.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "request": "^2.67.0",
+    "sequelize": "^3.17.1",
+    "sequelize-cli": "^2.3.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-nodemon": "^2.0.6",
+    "shipit-cli": "^1.4.1",
+    "shipit-deploy": "^2.1.2"
+  }
+}
